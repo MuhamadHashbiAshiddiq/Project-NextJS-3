@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Logo1 from "../public/images/logo.png";
+import Logo from "../public/images/logo.png";
 
 export default function Header() {
   return (
@@ -9,7 +9,7 @@ export default function Header() {
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <Link href="/">
           <a className="flex md:w-1/5 title-font font-medium items-center md:justify-start mb-4 md:mb-0">
-            <Image src={Logo1} width={40} height={40} alt="logo" />
+            <Image src={Logo} width={40} height={40} alt="logo" />
             <span className="ml-3 text-xl">DevSpace</span>
           </a>
         </Link>
