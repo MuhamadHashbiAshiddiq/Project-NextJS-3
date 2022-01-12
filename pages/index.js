@@ -4,6 +4,7 @@ import Link from "next/link";
 import matter from "gray-matter";
 import Layout from "../components/Layout";
 import Post from "../components/Post";
+import { sortByDate } from "../utils";
 
 export default function HomePage({ posts }) {
   return (
@@ -15,7 +16,7 @@ export default function HomePage({ posts }) {
           <Post key={index} post={post} />
         ))}
       </div>
-      
+
       <Link href="/blog">
         <a
           className="block text-center border border-gay-500 text-gray-800
@@ -47,6 +48,7 @@ export async function getStaticProps() {
   });
 
   return {
-    props: { posts },
+    props: {
+      posts: posts.sort(sortByDate).slice(0, 6),}
   };
 }
