@@ -7,6 +7,7 @@
       "@/utils/*": ["utils/*"],
       "@/styles/*": ["styles/*"],
       "@/public/*": ["public/*"],
+      "@/lib/*": ["lib/*"],
     }
   }
 }
